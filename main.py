@@ -27,6 +27,9 @@ fields += [
             "rematch", 1, 100, 600, width=75, height=20, font_size=15, alignment=1, bg_color=(1, 1, 1)
             ),
         Fields.TextField(
+            "win_lock", 1, 0, 0, width=1, height=1, bg_color=(1, 1, 1), border_color=(0, 0, 0, 0)
+            ),
+        Fields.TextField(
             "anti_cheat", 1, 0, 0, width=1, height=1, bg_color=(1, 1, 1), border_color=(0, 0, 0, 0)
             )
         ]
@@ -57,7 +60,8 @@ pdf.fill(
             "turn": "X",
             "X_won": "0",
             "O_won": "0",
-            "rematch": "Rematch"
+            "rematch": "Rematch",
+            "win_lock": "u",
             }
         )
 pdf.write("./tic-tac-toe.pdf")

@@ -13,3 +13,5 @@ if ((+this.getField("X_won").value + this.getField("O_won").value) % 2 == 0) {
 } else {
 	this.getField("turn").value = "O";
 }
+
+this.getField("win_lock").value = "u";

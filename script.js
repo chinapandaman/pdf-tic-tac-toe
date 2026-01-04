@@ -1,8 +1,9 @@
 if (!event.target.value) {
 	event.target.value = this.getField("turn").value;
 
-	if (checkWinCondition(event.target)) {
+	if (checkWinCondition(event.target) && this.getField("win_lock").value == "u") {
 		this.getField( this.getField("turn").value + "_won" ).value = this.getField( this.getField("turn").value + "_won" ).value + 1;
+		this.getField("win_lock").value = "l";
 	}
 
 	this.getField("turn").value = this.getField("turn").value == "X" ? "O" : "X";
